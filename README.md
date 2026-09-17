@@ -4,11 +4,13 @@
 
   <br> 
   
+[![Live App](https://img.shields.io/badge/🚀_Live_App-Click_Here-FF1493?style=flat-square&logo=googlechrome&logoColor=white)](https://credit-card-fraud-detection-1-1ao8.onrender.com/)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.141-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.6.1-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-f5c542?style=flat-square)](LICENSE)
+
 
 </div>
 
