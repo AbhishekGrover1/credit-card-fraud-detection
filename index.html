@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Credit Card Fraud Detection</title>
+  <meta name="description" content="Score a transaction for fraud probability with a Random Forest model trained on the Kaggle mlg-ulb/creditcardfraud dataset." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <h1>Credit Card Fraud Detection</h1>
+      <p class="hero__sub">A Random Forest model trained on real, anonymized transaction data. Fill in a transaction below, or load one, to see how it scores.</p>
+    </header>
+
+    <main>
+      <form id="txnForm" class="panel" novalidate>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="amount">Amount</label>
+            <div class="input-prefix">
+              <span aria-hidden="true">$</span>
+              <input type="number" id="amount" name="Amount" step="0.01" min="0" required inputmode="decimal" value="88.35" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="time">Time</label>
+            <input type="number" id="time" name="Time" step="1" required inputmode="numeric" value="94813" />
+            <p class="field__hint">Seconds since the first transaction in the dataset</p>
+          </div>
+        </div>
+
+        <div class="v-section">
+          <div class="v-section__head">
+            <label id="vGridLabel">Anonymized features (V1&ndash;V28)</label>
+            <p class="field__hint">Outputs of a PCA transform upstream &mdash; not human-interpretable on their own, but this is what the model actually reads.</p>
+          </div>
+          <div id="vGrid" class="v-grid" role="group" aria-labelledby="vGridLabel"></div>
+        </div>
+
+        <div class="actions">
+          <div class="actions__secondary">
+            <button type="button" id="loadSampleBtn" class="btn btn--ghost">Load a real transaction</button>
+            <button type="button" id="randomizeBtn" class="btn btn--ghost">Randomize V1&ndash;V28</button>
+          </div>
+          <button type="submit" id="submitBtn" class="btn btn--primary">Check transaction</button>
+        </div>
+        <p id="formNote" class="form-note" aria-live="polite"></p>
+      </form>
+
+      <section id="result" class="result result--empty" aria-live="polite">
+        <p class="result__placeholder">Submit a transaction above to see a prediction.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Trained on 284,807 real transactions from Kaggle's <code>mlg-ulb/creditcardfraud</code> dataset, where fraud accounts for just 0.17% of cases. This is a portfolio demo, not a production fraud system &mdash; see <a href="https://github.com/AbhishekGrover1" target="_blank" rel="noopener">the repository</a> for the full methodology.</p>
+      <p class="site-footer__credit">
+        Built by Abhishek Grover &middot;
+        <a href="https://github.com/AbhishekGrover1" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="https://linkedin.com/in/abhishek-grover07" target="_blank" rel="noopener">LinkedIn</a> &middot;
+        <a href="https://abhishekgroverai.netlify.app" target="_blank" rel="noopener">Portfolio</a>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
