@@ -1,4 +1,4 @@
-# *Credit Card Fraud Detection* 💳
+# *Credit Card Fraud Detection* 
   <br> 
   
 [![Live App](https://img.shields.io/badge/🚀_Live_App-Click_Here-FF1493?style=flat-square&logo=googlechrome&logoColor=white)](https://credit-card-fraud-detection-1-1ao8.onrender.com/)
