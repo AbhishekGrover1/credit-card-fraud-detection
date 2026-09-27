@@ -1,7 +1,4 @@
-<div align="center">
-
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=C084FC&center=true&vCenter=true&width=850&lines=💳+Credit+Card+Fraud+Detection;End-to-End+Machine+Learning+Pipeline;Random+Forest+•+FastAPI+•+scikit-learn;%7C+Deployed+by+Abhishek+Grover" alt="Typing animation" />
-
+# *Credit Card Fraud Detection* 💳
   <br> 
   
 [![Live App](https://img.shields.io/badge/🚀_Live_App-Click_Here-FF1493?style=flat-square&logo=googlechrome&logoColor=white)](https://credit-card-fraud-detection-1-1ao8.onrender.com/)
@@ -14,7 +11,7 @@
 
 </div>
 
-## Table of Contents
+## *Table of Contents*
 - [Overview](#overview)
 - [Results](#results)
 - [How It Works](#how-it-works)
@@ -27,7 +24,7 @@
 - [Tech Stack](#tech-stack)
 - [License](#license)
 
-## Overview
+## *Overview*
 
 A tuned `RandomForestClassifier` that scores a credit card transaction's
 fraud probability from its elapsed time, transaction amount, and 28
@@ -50,7 +47,7 @@ same process, deployed as a single Render web service. Full methodology,
 every number below, and one real deployment bug this surfaced are
 documented in [`PROCESS.md`](PROCESS.md).
 
-## Results
+## *Results*
 
 Held-out test set (56,962 transactions never seen during tuning, 98 of them
 fraud):
@@ -68,7 +65,7 @@ them. Three models were compared before landing on Random Forest — see the
 [full comparison table](PROCESS.md#5-model-selection) for Logistic
 Regression and Decision Tree numbers.
 
-## How It Works
+## *How It Works*
 
 ```mermaid
 flowchart LR
@@ -84,7 +81,7 @@ The entire pipeline — scaler and classifier — is one serialized object, so
 the API never has to replicate preprocessing logic by hand; it loads one
 file and calls `.predict_proba()` on it.
 
-## The Web App
+## *The Web App*
 
 `V1`–`V28` are PCA components with no meaning a person could type in by
 hand, so the form at `/` doesn't ask anyone to invent them:
@@ -100,7 +97,7 @@ hand, so the form at `/` doesn't ask anyone to invent them:
 
 Submitting calls the same `/predict` endpoint documented below.
 
-## Repository Structure
+## *Repository Structure*
 
 ```
 credit-card-fraud-detection/
@@ -118,7 +115,7 @@ credit-card-fraud-detection/
 └── LICENSE
 ```
 
-## API Reference
+## *API Reference*
 
 | Method | Path | Description |
 |---|---|---|
@@ -159,7 +156,7 @@ illustration — they are not a real transaction.
 
 </details>
 
-## Running Locally
+## *Running Locally*
 
 ```bash
 git clone <this-repo-url>
@@ -171,7 +168,7 @@ uvicorn app:app --reload
 
 Visit `http://localhost:8000/` for the UI, or `/docs` for the raw API.
 
-## Deploying to Render
+## *Deploying to Render*
 
 1. Push this repository to GitHub.
 2. On Render: **New → Blueprint**, connect the repo — `render.yaml` is
@@ -182,7 +179,7 @@ Visit `http://localhost:8000/` for the UI, or `/docs` for the raw API.
 On the free plan the service sleeps after 15 minutes idle; the first
 request after that can take 30–60 seconds to wake it back up.
 
-## Limitations
+## *Limitations*
 
 This is trained on one well-known benchmark dataset with anonymized PCA
 features — a demonstration of the modeling and deployment pipeline, not a
@@ -191,18 +188,18 @@ uses the model's default 0.5 threshold (it also returns the raw
 `fraud_probability` so a caller can apply their own). Details and more
 caveats in [`PROCESS.md`](PROCESS.md#9-limitations--honest-caveats).
 
-## Tech Stack
+## *Tech Stack*
 
 `Python` · `FastAPI` · `scikit-learn` (RandomForestClassifier, ColumnTransformer,
 RobustScaler) · `pandas` / `numpy` · `joblib` · vanilla `HTML`/`CSS`/`JavaScript` · `Render`
 
-## License
+## *License*
 
 [MIT](LICENSE) © 2026 Abhishek Singh Grover
 
 <div align="center">
 
-**Abhishek Grover** — AI/ML Engineer
+*Abhishek Grover* — AI/ML Engineer
 
 [GitHub](https://github.com/AbhishekGrover1) · [LinkedIn](https://linkedin.com/in/abhishek-grover07) · [Portfolio](https://abhishekgroverai.netlify.app) · [Instagram](https://instagram.com/abh1shekgrover)
 
