@@ -47,7 +47,7 @@ same process, deployed as a single Render web service. Full methodology,
 every number below, and one real deployment bug this surfaced are
 documented in [`PROCESS.md`](PROCESS.md).
 
-## *Results*
+## *Results*  
 
 Held-out test set (56,962 transactions never seen during tuning, 98 of them
 fraud):
