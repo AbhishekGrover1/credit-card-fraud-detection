@@ -188,7 +188,7 @@ uses the model's default 0.5 threshold (it also returns the raw
 `fraud_probability` so a caller can apply their own). Details and more
 caveats in [`PROCESS.md`](PROCESS.md#9-limitations--honest-caveats).
 
-## *Tech Stack*
+## *Tech Stacks*
 
 `Python` · `FastAPI` · `scikit-learn` (RandomForestClassifier, ColumnTransformer,
 RobustScaler) · `pandas` / `numpy` · `joblib` · vanilla `HTML`/`CSS`/`JavaScript` · `Render`
